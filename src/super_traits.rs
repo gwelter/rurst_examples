@@ -17,6 +17,11 @@ impl Bounded for Size {
         Self::Small
     }
 }
+impl Default for Size {
+    fn default() -> Self {
+        Self::Medium
+    }
+}
 
 fn get_size_num(size: &Size) -> u8 {
     match size {
@@ -26,7 +31,7 @@ fn get_size_num(size: &Size) -> u8 {
     }
 }
 
-fn main() {
+pub fn run_example() {
     let my_size = Size::Large;
     let min_size_num = get_size_num(&Size::get_min());
     let default_size_num = get_size_num(&Size::default());
