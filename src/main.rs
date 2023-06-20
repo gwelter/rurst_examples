@@ -1,3 +1,4 @@
+mod deref;
 mod generics;
 mod generics_lifetime;
 mod rc_smart_pointers;
@@ -12,4 +13,5 @@ fn main() {
     generics_lifetime::run_example();
     structs_elision::run_example();
     rc_smart_pointers::run_example();
+    deref::run_example();
 }
